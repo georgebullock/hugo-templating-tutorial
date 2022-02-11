@@ -1,7 +1,7 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
-theme = 'ga-hugo-theme-master'
+theme = 'hugo-templating-primer'
 
 # PROJECT FILE STRUCTURE NOTES
 # archetypes --> What is this directory for? --> Default frontmatter that your pages use 
