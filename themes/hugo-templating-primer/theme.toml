@@ -1,0 +1,12 @@
+# See https://github.com/georgebullock/hugo-templating-tutorial for an example
+
+name = "Hugo Templating Tutorial Theme"
+license = "MIT"
+description = "A theme used to demonstrate Hugo templating"
+tags = []
+features = []
+min_version = "0.25.1"
+
+[author]
+  name = "George Bullock"
+  homepage = "https://www.georgebullock.dev"
