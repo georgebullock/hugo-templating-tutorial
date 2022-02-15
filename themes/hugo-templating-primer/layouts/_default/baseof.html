@@ -16,15 +16,17 @@
   <body>
     <div class="columns">
       <div class="column is-one-third">
-        <!-- Block for sidebar nav content -->
+        <!-- Define sidebar block to render sidebar content -->
         {{ block "sidebar" . }}{{ end }}
       </div>
+
       <div class="column">
-        <!-- Block for main content -->
+        <!-- Define main block to render main content -->
         {{ block "main" . }}{{ end }}
       </div>
     </div>
-    <!-- block for footer content -->
+
+    <!-- Define footer block to render footer content -->
     {{ block "footer" . }}{{ end }}
   </body>
 </html>
