@@ -13,5 +13,20 @@
     <title>{{ .Title }}</title>
   </head>
 
-  {{ block "main" .}} {{ end }}
+  <body>
+    <div class="columns">
+      <div class="column is-one-third">
+        <!-- Define sidebar block to render sidebar content -->
+        {{ block "sidebar" . }}{{ end }}
+      </div>
+
+      <div class="column">
+        <!-- Define main block to render main content -->
+        {{ block "main" . }}{{ end }}
+      </div>
+    </div>
+
+    <!-- Define footer block to render footer content -->
+    {{ block "footer" . }}{{ end }}
+  </body>
 </html>

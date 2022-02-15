@@ -1,12 +1,61 @@
+{{ define "sidebar" }}
+<section class="section">
+  <aside class="menu">
+    <p class="menu-label">
+      General
+    </p>
+    <ul class="menu-list">
+      <li><a>Dashboard</a></li>
+      <li><a>Customers</a></li>
+    </ul>
+    <p class="menu-label">
+      Administration
+    </p>
+    <ul class="menu-list">
+      <li><a>Team Settings</a></li>
+      <li>
+        <a class="is-active">Manage Your Team</a>
+        <ul>
+          <li><a>Members</a></li>
+          <li><a>Plugins</a></li>
+          <li><a>Add a member</a></li>
+        </ul>
+      </li>
+      <li><a>Invitations</a></li>
+      <li><a>Cloud Storage Environment Settings</a></li>
+      <li><a>Authentication</a></li>
+    </ul>
+    <p class="menu-label">
+      Transactions
+    </p>
+    <ul class="menu-list">
+      <li><a>Payments</a></li>
+      <li><a>Transfers</a></li>
+      <li><a>Balance</a></li>
+    </ul>
+  </aside>
+  </h2>
+</section>
+{{ end }} 
+
 {{ define "main" }}
-<div>
-  <h1>Hugo Templating Primer</h1>
-</div>
-<h2>Reasons why Hugo is awesome</h2>
-<ul>
-  <li class="link">It's the fastest static site generator.</li>
-  <li>It does everything you need in one package.</li>
-  <li>It'll save you time and build costs.</li>
-  <li>It helps you create lean, well-structured sites.</li>
-</ul>
+<section class="section">
+  <h1 class="title">Main Section</h1>
+  <h2 class="subtitle">
+    A simple container to divide your page into <strong>sections</strong>, like
+    the one you're currently reading.
+  </h2>
+</section>
+{{ end }} 
+
+{{ define "footer" }}
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+    </p>
+  </div>
+</footer>
 {{ end }}
