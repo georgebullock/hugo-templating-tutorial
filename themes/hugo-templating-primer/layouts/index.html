@@ -1,61 +1,29 @@
 {{ define "sidebar" }}
-<section class="section">
-  <aside class="menu">
-    <p class="menu-label">
-      General
-    </p>
-    <ul class="menu-list">
-      <li><a>Dashboard</a></li>
-      <li><a>Customers</a></li>
-    </ul>
-    <p class="menu-label">
-      Administration
-    </p>
-    <ul class="menu-list">
-      <li><a>Team Settings</a></li>
-      <li>
-        <a class="is-active">Manage Your Team</a>
-        <ul>
-          <li><a>Members</a></li>
-          <li><a>Plugins</a></li>
-          <li><a>Add a member</a></li>
-        </ul>
-      </li>
-      <li><a>Invitations</a></li>
-      <li><a>Cloud Storage Environment Settings</a></li>
-      <li><a>Authentication</a></li>
-    </ul>
-    <p class="menu-label">
-      Transactions
-    </p>
-    <ul class="menu-list">
-      <li><a>Payments</a></li>
-      <li><a>Transfers</a></li>
-      <li><a>Balance</a></li>
-    </ul>
-  </aside>
-  </h2>
-</section>
+ {{ partial "navigation.html" }}
 {{ end }} 
 
 {{ define "main" }}
 <section class="section">
-  <h1 class="title">Main Section</h1>
-  <h2 class="subtitle">
-    A simple container to divide your page into <strong>sections</strong>, like
-    the one you're currently reading.
-  </h2>
+  <h1 class="title">Go Templating via Hugo in 3 Minutes. Let's Go!</h1>
+
+  <div>
+    <ol class="content">
+      <li class="title is-5">Go has its own templating language: https://pkg.go.dev/text/template</li>
+      <li class="title is-5">Go templating is not particularly easy to lear or read. The fundamentals are easy to learn, but beyond the basics it’s a painful.</li>
+      <li class="title is-5">There are superior JavaScript-based options for creating UI’s (e.g. React, Vue, Handlebars, etc.)</li>
+      <li class="title is-5">The one context where Go templating shines above the rest is via Hugo - a static site generator written in Go.</li>
+      <li class="title is-5">Hugo is by far the fastest static-site generator available today. And it’s orders of magnitude faster than more popular React-based options like Next.js and Gatsby.</li>
+      <li class="title is-5">Hugo setup is dead simple, it comes with a variety of features and configuration for advanced customization.</li>
+      <li class="title is-5">If you want to avoid all the fancy stuff, there are hundreds of free ready-to-go themes you can drop in and use.</li>
+      <li class="title is-5">If we're going to build a bunch of Go apps that need documentation. We should consider Go Templating + Hugo + CSS Framework.</li>
+      <li class="title is-5">The only obstacle is learning Go templating, which is a low barrier to entry.</li>
+      <li class="title is-5">There CMS options for non-developers create, edit, and maintain content.</li>
+    </ol>
+  </div>
+
 </section>
 {{ end }} 
 
 {{ define "footer" }}
-<footer class="footer">
-  <div class="content has-text-centered">
-    <p>
-      <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-    </p>
-  </div>
-</footer>
+  {{ partial "footer.html" }}
 {{ end }}
