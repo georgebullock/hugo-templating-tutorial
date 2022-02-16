@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Learns on Go Templating via Hugo</title>
+    <link>http://example.org/learn/</link>
+    <description>Recent content in Learns on Go Templating via Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 10 Feb 2022 16:51:35 +0100</lastBuildDate><atom:link href="http://example.org/learn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Documentation Sites</title>
+      <link>http://example.org/learn/documentation/</link>
+      <pubDate>Thu, 10 Feb 2022 16:51:35 +0100</pubDate>
+      
+      <guid>http://example.org/learn/documentation/</guid>
+      <description> https://pkg.go.dev/text/template https://gohugo.io/ https://bulma.io/  </description>
+    </item>
+    
+    <item>
+      <title>Hugo For Content Managers</title>
+      <link>http://example.org/learn/cms-options/</link>
+      <pubDate>Thu, 10 Feb 2022 16:51:35 +0100</pubDate>
+      
+      <guid>http://example.org/learn/cms-options/</guid>
+      <description> https://strapi.io/integrations/hugo-cms https://forestry.io/ https://www.netlifycms.org/docs/hugo/ https://cloudcannon.com/hugo-cms/  </description>
+    </item>
+    
+    <item>
+      <title>Hugo Is Fast</title>
+      <link>http://example.org/learn/hugo-speed/</link>
+      <pubDate>Thu, 10 Feb 2022 16:51:35 +0100</pubDate>
+      
+      <guid>http://example.org/learn/hugo-speed/</guid>
+      <description> https://css-tricks.com/comparing-static-site-generator-build-times/ https://ssg-build-performance-tests.netlify.app/  </description>
+    </item>
+    
+    <item>
+      <title>Hugo Themes</title>
+      <link>http://example.org/learn/themes/</link>
+      <pubDate>Thu, 10 Feb 2022 16:51:35 +0100</pubDate>
+      
+      <guid>http://example.org/learn/themes/</guid>
+      <description>https://themes.gohugo.io/</description>
+    </item>
+    
+    <item>
+      <title>Hugo Tutorials</title>
+      <link>http://example.org/learn/tutorials/</link>
+      <pubDate>Thu, 10 Feb 2022 16:51:35 +0100</pubDate>
+      
+      <guid>http://example.org/learn/tutorials/</guid>
+      <description> https://cloudcannon.com/community/learn/hugo-tutorial/ https://www.youtube.com/watch?v=qtIqKaDlqXo&amp;amp;list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3  </description>
+    </item>
+    
+  </channel>
+</rss>
