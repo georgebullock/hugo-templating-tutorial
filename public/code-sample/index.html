@@ -1,0 +1,164 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    
+    <link rel="stylesheet" href="/styles.min.css" />
+
+    <title>Hugo Code Sample</title>
+  </head>
+
+  <body>
+    <div class="columns">
+      <div class="column is-one-third">
+        
+        
+  <section class="section">
+  <aside class="menu">
+    <p class="menu-label">Table of Contents</p>
+    <ul class="menu-list">
+      <li><a href="http://localhost:1313/">Home</a></li>
+      <li><a href="http://localhost:1313/code-sample/">Code Sample</a></li>
+      <li>
+        <a href="http://localhost:1313/learn/tutorials/">Tutorials</a>
+      </li>
+      <li>
+        <a href="http://localhost:1313/learn/documentation/"
+          >Documentation Sites</a
+        >
+      </li>
+      <li>
+        <a href="http://localhost:1313/learn/themes/">Hugo Themes</a>
+      </li>
+      <li>
+        <a href="http://localhost:1313/learn/hugo-speed/">Speed Tests</a>
+      </li>
+      <li>
+        <a href="http://localhost:1313/learn/cms-options/">CMS Options</a>
+      </li>
+    </ul>
+  </aside>
+</section>
+
+
+      </div>
+
+      <div class="column">
+        
+        
+<section class="section">
+  <h1 class="title">Hugo Code Sample</h1>
+  
+  <pre tabindex="0"><code>-------------------------------------------------------------------------
+  File Structure
+-------------------------------------------------------------------------
+├── archetypes
+├── config.toml
+├── content
+├── data
+├── layouts
+├── static
+└── themes
+
+-------------------------------------------------------------------------
+  _baseof.HTML
+-------------------------------------------------------------------------
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta
+      name=&quot;viewport&quot;
+      content=&quot;width=device-width, initial-scale=1.0, shrink-to-fit=no&quot;
+    /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot; /&gt;
+
+    {{$styles := resources.Get &quot;/styles.scss&quot; | toCSS | minify}}
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;{{$styles.Permalink | relURL}}&quot; /&gt;
+
+    &lt;title&gt;{{ .Title }}&lt;/title&gt;
+
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;div class=&quot;columns&quot;&gt;
+      &lt;div class=&quot;column is-one-third&quot;&gt;
+        &lt;!-- Define sidebar block to render sidebar content --&gt;
+        {{ block &quot;sidebar&quot; . }}{{ end }}
+      &lt;/div&gt;
+
+      &lt;div class=&quot;column&quot;&gt;
+        &lt;!-- Define main block to render main content --&gt;
+        {{ block &quot;main&quot; . }}{{ end }}
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Define footer block to render footer content --&gt;
+    {{ block &quot;footer&quot; . }}{{ end }}
+
+  &lt;/body&gt;
+&lt;/html&gt;
+
+-------------------------------------------------------------------------
+  single.HTML
+-------------------------------------------------------------------------
+{{ define &quot;sidebar&quot; }}
+  {{ partial &quot;navigation.html&quot; }}
+{{ end }}
+
+{{ define &quot;main&quot; }}
+&lt;section class=&quot;section&quot;&gt;
+  &lt;h1 class=&quot;title&quot;&gt;{{ .Title }}&lt;/h1&gt;
+
+  {{ .Content }}
+&lt;/section&gt;
+{{ end }}
+
+{{ define &quot;footer&quot; }}
+  {{ partial &quot;footer.html&quot; }}
+{{ end }}
+
+
+-------------------------------------------------------------------------
+  list.HTML
+-------------------------------------------------------------------------
+{ define &quot;sidebar&quot; }} {{ partial &quot;navigation.html&quot; }} {{ end }} {{ define
+&quot;main&quot; }}
+&lt;section class=&quot;section&quot;&gt;
+  &lt;h1 class=&quot;title&quot;&gt;Main Section&lt;/h1&gt;
+  {{ range (.Site.GetPage &quot;section&quot; &quot;learn&quot;).Pages }}
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;{{ .Permalink }}&quot;&gt;{{ .Title }}&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  {{ end }}
+&lt;/section&gt;
+{{ end }} {{ define &quot;footer&quot; }} {{ partial &quot;footer.html&quot; }} {{ end }}
+</code></pre>
+</section>
+
+      </div>
+    </div>
+
+    
+    
+  <footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      Made with
+      <a href="https://gohugo.io/"><strong>Hugo</strong></a
+      >, <a href="https://bulma.io/"><strong>Bulma</strong></a
+      >, and a little <strong>TLC</strong> by
+      <a href="https://twitter.com/george_bullock"
+        ><strong>@george_bullock</strong></a
+      >
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>

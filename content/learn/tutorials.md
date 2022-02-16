@@ -1,7 +1,7 @@
 ---
 title: "Hugo Tutorials"
 date: 2022-02-10T16:51:35+01:00
-draft: true
+draft: false
 ---
 
 - https://cloudcannon.com/community/learn/hugo-tutorial/

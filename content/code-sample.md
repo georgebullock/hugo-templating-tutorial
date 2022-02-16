@@ -1,10 +1,21 @@
 ---
 title: "Hugo Code Sample"
 date: 2022-02-10T16:51:11+01:00
-draft: true
+draft: false
 ---
 
 ```
+-------------------------------------------------------------------------
+  File Structure
+-------------------------------------------------------------------------
+├── archetypes
+├── config.toml
+├── content
+├── data
+├── layouts
+├── static
+└── themes
+
 -------------------------------------------------------------------------
   _baseof.HTML
 -------------------------------------------------------------------------
@@ -51,11 +62,10 @@ draft: true
 {{ end }}
 
 {{ define "main" }}
-<section class="section">
-  <h1 class="title">{{ .Title }}</h1>
-
-  {{ .Content }}
-</section>
+  <section class="section">
+    <h1 class="title">{{ .Title }}</h1>
+    {{ .Content }}
+  </section>
 {{ end }}
 
 {{ define "footer" }}
@@ -66,15 +76,22 @@ draft: true
 -------------------------------------------------------------------------
   list.HTML
 -------------------------------------------------------------------------
-{ define "sidebar" }} {{ partial "navigation.html" }} {{ end }} {{ define
-"main" }}
-<section class="section">
-  <h1 class="title">Main Section</h1>
-  {{ range (.Site.GetPage "section" "learn").Pages }}
-  <ul>
-    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-  </ul>
-  {{ end }}
-</section>
-{{ end }} {{ define "footer" }} {{ partial "footer.html" }} {{ end }}
+{{ define "sidebar" }}
+  {{ partial "navigation.html" }}
+{{ end }}
+
+{{ define "main" }}
+  <section class="section">
+    <h1 class="title">Main Section</h1>
+    {{ range (.Site.GetPage "section" "learn").Pages }}
+    <ul>
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    </ul>
+    {{ end }}
+  </section>
+{{ end }}
+
+{{ define "footer" }}
+  {{ partial "footer.html" }}
+{{ end }}
 ```
