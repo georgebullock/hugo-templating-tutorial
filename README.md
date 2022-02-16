@@ -1,3 +1,3 @@
 # hugo-templating-tutorial
 
-A tutorial project I'm doing for work.
+A micro project I did to introduce Aroundhome's engineering team to Go templating via Hugo
