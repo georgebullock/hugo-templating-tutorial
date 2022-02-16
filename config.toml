@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://hugo-primer.netlify.app/'
 languageCode = 'en-us'
 title = 'Go Templating via Hugo'
 theme = 'hugo-templating-primer'
