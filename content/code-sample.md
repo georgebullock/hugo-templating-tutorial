@@ -62,11 +62,10 @@ draft: false
 {{ end }}
 
 {{ define "main" }}
-<section class="section">
-  <h1 class="title">{{ .Title }}</h1>
-
-  {{ .Content }}
-</section>
+  <section class="section">
+    <h1 class="title">{{ .Title }}</h1>
+    {{ .Content }}
+  </section>
 {{ end }}
 
 {{ define "footer" }}
@@ -77,15 +76,22 @@ draft: false
 -------------------------------------------------------------------------
   list.HTML
 -------------------------------------------------------------------------
-{ define "sidebar" }} {{ partial "navigation.html" }} {{ end }} {{ define
-"main" }}
-<section class="section">
-  <h1 class="title">Main Section</h1>
-  {{ range (.Site.GetPage "section" "learn").Pages }}
-  <ul>
-    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-  </ul>
-  {{ end }}
-</section>
-{{ end }} {{ define "footer" }} {{ partial "footer.html" }} {{ end }}
+{{ define "sidebar" }}
+  {{ partial "navigation.html" }}
+{{ end }}
+
+{{ define "main" }}
+  <section class="section">
+    <h1 class="title">Main Section</h1>
+    {{ range (.Site.GetPage "section" "learn").Pages }}
+    <ul>
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    </ul>
+    {{ end }}
+  </section>
+{{ end }}
+
+{{ define "footer" }}
+  {{ partial "footer.html" }}
+{{ end }}
 ```
